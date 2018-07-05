@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+	<title>Pay</title>
+	<style>
+		*,
+		*::after,
+		*::before{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		:root{
+			--heightnav:3rem;
+			--placeholdercolor: rgba(160,160,160,0.85);
+		}
+		*:focus {outline: none;}/*quitando el valor por defecto de :focus*/
+		.formularior{
+			box-sizing: border-box;
+			background-color: rgba(2,2,2,0.45);
+			width: 100%;
+			height: 100vh;
+			display: flex;
+		}
+		.contformregister{
+			box-sizing: border-box;
+			display: block;
+			margin: auto;
+			width: 50%;
+			height: auto;
+			background-color: rgba(255,255,255,1.00);
+			border-radius: 1rem;
+		}
+		.form{
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			padding: 2%;
+		}
+
+
+		.labelte{
+			font-size: 1.5rem;
+			color: black;
+			display: block;
+			text-align: center;
+			
+		}
+		.label{
+			font-size: 1.3rem;
+			color: black;
+			display: block;
+			margin-left: 1rem;
+		}
+		#name{
+			width: 49%;
+			float: left;
+			margin-left: .5%;
+		}
+		
+		#apell{width: 49%;
+			float: right;
+			margin-right: .5%;
+		}
+		#nom, #ape{
+			width: 100%;
+			padding: .65rem;
+			padding-left: 2.48rem;
+			border-radius: .3rem;
+			border: none;
+			font-size: 1.2rem;
+			margin: .2rem 0;
+			background-color:rgba(255,255,255,0.99);
+		}
+		
+		input{
+			width: 100%;
+			padding: .65rem;
+			background-color:rgba(255,255,255,0.99);
+			padding-left: 2.48rem;
+			border-radius: .3rem;
+			border: none;
+			font-size: 1.2rem;
+			margin: .2rem 0;
+		}
+		.invalid:invalid{
+			box-shadow: 1px 1px 2.5px 1px red;
+			background-color:rgba(255,255,255,1.00);
+			background-image: url(icons/error.png);
+			background-repeat: no-repeat;
+			background-position: 100% 5px;
+			}
+		.valid:valid{
+			box-shadow: 1px 1px 2.5px 1px green;
+			background-color:rgba(245,245,245,1.00);
+			background-image: url(icons/valid.png);
+			background-repeat: no-repeat;
+			background-position: 100% 5px;
+
+		}
+		input:hover{
+			background-color: rgba(205,205,205,1.00);
+		}
+		input:focus{
+			 background-color: rgba(225,225,225,1);
+			}
+		#paymu{
+			width: 50%;
+			padding: .65rem;
+			background-color:rgba(245,245,245,1.00);
+			border-radius: .3rem;
+			border: none;
+			font-size: 1.2rem;
+			margin:auto;
+			display: block;
+			cursor: pointer;
+		}
+		#paymu:hover{
+			background-color: rgba(35,172,157,1.00);color: white;
+		}
+		@media screen and (max-width: 810px) {
+
+			.contformregister{width: 95%;height: auto;transition: all 1.5s;}
+			#name{width: 100%;font-size: 1.2rem;}
+			.apell{width: 100%;margin-left: 0;font-size: 1.2rem;}
+			
+
+
+		}
+		#descargamusica,#volver{
+			text-decoration: none;
+			font-size: 1.2rem;
+			display: block;
+			margin: auto;
+		}
+	</style>
+	<script src="JS/jquery.min.js"></script>
+</head>
+<body>
+	
+	<div class="formularior">
+
+		<div class="contformregister">
+			
+			<form  class="form" action="index.html">
+				<label class="labelte" for="registrame">Iniciar Compra</label>
+				
+				
+				<div id="name">
+					<label class="label">Nombre</label>
+					<input id="nom" type="text" pattern="[a-zA-Z]{3,15}" placeholder="Nombre" name="Nombre" required>
+				</div>
+				<div id="apell">
+					<label class="label" >Apellido</label>
+					<input id="ape" type="text" placeholder="Apellidos" name="Apellido"  pattern="[a-zA-Z]{5,25}" maxlength="15" required>
+				</div>
+				<input id="tarjeta"  placeholder="Numero de Tarjeta" pattern="[0-9]{16}" maxlength="16" required>
+				<input id="fvt" placeholder="Fecha de vencimiento (DD/MM/AA)" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" maxlenght="8" required>
+				<input id="codet" placeholder="Codigo de seguridad (CVV)"   pattern="[0-9]{3,4}" maxlength="4" required>
+				<input id="paymu" type="submit" value="Comprar">
+				<a href="Musica/Karol G - Mi Cama.mp3" id="descargamusica" download>Solo Descargas</a>
+				<a href="index.html" id="volver">Volver</a>
+			</form>
+		</div>	
+	</div>
+	<script>
+		$('.form').submit(function(e){
+		   
+			
+		})
+		
+		
+		$('#nom').focusout(function(){
+			if($('#nom').val().length == ""){
+				$(this).addClass('invalid')
+			}
+			else{
+				$(this).addClass('valid')
+			}
+		})
+		$('#ape').focusout(function(){
+			if($('#ape').val().length == ""){
+				$(this).addClass('invalid')
+			}
+			else{
+				$(this).addClass('valid')
+			}
+		})
+		$('#tarjeta').focusout(function(){
+			if($('#tarjeta').val().length == ""){
+				$(this).addClass('invalid')
+			}
+			else{
+				$(this).addClass('valid')
+			}
+		})
+	/*	if (!visa.match(/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/)) 
+  visa_error = "No es un número de Visa correcto";
+var eReg=/^(?:4\d([\- ])?\d{6}\1\d{5}|(?:4\d{3}|5[1-5]\d{2}|6011)([\- ])?\d{4}\2\d{4}\2\d{4})$/; && $('#codet').match(eReg))*/
+		$('#fvt').focusout(function(){
+		if($('#fvt').val().length == ""){
+				$(this).addClass('invalid')
+		}
+		else{
+				$(this).addClass('valid')
+			}
+		})
+		
+		$('#codet').focusout(function(){
+			
+			if($('#codet').val().length >=3 && $('#codet').val().length <=4) {
+				$(this).addClass('valid')
+			}
+			else{
+				$(this).addClass('invalid')
+				
+			}
+		})
+			
+		$('span').click(function(){
+					$('.infoartista').fadeOut()
+				}).css({
+				fontSize:'3.5rem',
+				position:'fixed',
+				cursor:'pointer',
+				float: 'right',
+				color:'red',
+				margin: '0 95%',
+			zIndex:95654555555552554343
+				
+			})
+	</script>
+
+</body>
+</html>

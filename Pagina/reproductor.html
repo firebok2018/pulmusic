@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Gloria+Hallelujah|Open+Sans|Paytone+One|Poppins|Roboto|Roboto+Mono|Ubuntu" rel="stylesheet">
+	<meta name="viewport" content="width=device-width"><title>reproductor</title>
+	<style>
+		*,
+		*::after,
+		*::before{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		*:focus{outline: none;}
+		#mainm{
+			width: 100vw;
+			height: 15vh;
+			display: flex;
+			position: fixed;
+			bottom: 0;
+			left:0;
+			right:0;
+		}
+		#image{
+			width: 10%;
+			height: auto;
+			}
+		#caratula{
+			padding: 8%;
+			width: 100%;
+			height: auto;
+		}
+		#player{
+			box-sizing: border-box;
+			display: flex;
+			margin: auto;
+			width: 80%;
+			height: 100%;
+		}
+		#infosong{
+			font-family: 'Poppins', sans-serif;
+			width: 20%;
+			height: 8rem;
+			display: flex;
+		}
+		#songTitle{
+			font-family: 'Poppins', sans-serif;
+			width: 100%;
+			margin: auto;
+			text-align: center;
+			color: white;
+		}
+		#buttons{
+			display: flex;
+			margin: auto;
+			width: 15%;
+			height: 100%;
+		}
+		#pre, #next{
+			display: block;
+			border-radius: 50%;
+			width: 1.4rem;
+			height: 1.4rem;
+			margin: auto;
+			opacity: .5;
+			background-color: transparent;
+			background-image:url(../icons/IMG_20180702_014850_778.jpg);
+			background-repeat:-no-repeat;
+		} 
+		#play{
+			border-radius:50%;
+			width: 3rem;
+			height: 3rem;
+			margin: auto;
+			opacity: .5;
+			background-color: transparent ;
+			background-repeat:-no-repeat;
+			background-image:url(../icons/play.png);
+		}
+		
+		#pre:hover, #next:hover, #play:hover,#audio:hover{opacity: 1;cursor: pointer;}
+		#boxrange{
+			width: 80%;
+			height: .3rem;
+			display: block;
+			position: relative;
+			margin: auto;
+		}
+		#pro{
+			width:100%;
+			height: .3rem;
+			position: absolute;
+			
+			display: block;
+			background-color: transparent;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+		#repro{
+			width: 60%;
+			height: 100%;
+			display: flex;
+		}
+		
+		#myDis{
+			-webkit-appearance:none;
+			background-color: transparent;
+			width:100%;
+			height: .3rem;
+			position: absolute;
+		}
+		#myDis::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width: .8rem;
+			height: .8rem;
+			border-radius: 50%;
+			background-color: darkgreen;
+			box-shadow: 1px 1px 2px 1px rgba(2,30,2,1.00);
+			cursor: pointer;
+		}
+		#myDis::-webkit-slider-runnable-track{
+			cursor: pointer;
+			background-color: none;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+			position: sticky;
+		}
+		.minuto{
+			width: 20%;
+			height: 100%;
+			display:flex;
+		}
+		#time, #tr{
+			font-family: 'Poppins', sans-serif;
+			margin: auto;
+			color: white;
+			font-size: 1.1rem;
+		}
+		#vol{
+			width: 25%;
+			height: 100%;
+			
+			display: flex;
+		}
+		#volumen{
+			-webkit-appearance:none;
+			background-color: rgba(128,128,128,1.00);
+			width: 80%;
+			height: .3rem;
+			border-radius: 50px;
+			margin: auto;
+			cursor: pointer;
+		}
+		#audio{
+			width: 1.2rem;
+			height: 1.2rem;
+			margin: auto;
+			opacity: .5;
+		}
+		#volumen::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			background-color: green;
+			width: .8rem;
+			height: .8rem;
+			border-radius: 50px;
+			box-shadow: 1px 1px 2px 1px rgba(2,30,2,1.00);
+		}
+		
+		#pay{
+			width: 10%;
+			height: auto;
+			display: flex;
+		}
+		#cpay{
+			width: 90%;
+			padding: 3%;
+			font-size: 1.2rem;
+			border: none;
+			background-color: rgba(231,122,16,1.00);
+			color: white;
+			border-radius: 10px;
+			margin: auto;
+		}
+		#cpay:hover{
+			background-color: rgba(171,84,0,1.00);
+		}
+		#bgc{
+			position: absolute;
+			filter:blur(10px);
+			width:100%;
+			height:100%;
+			z-index: -10;
+		}
+		@media screen and (max-width: 810px) {
+			       #mainm{width:100vw;height:20vh;}
+			       #image{display:none}
+			       #player{width:100vw; height:100%;display:block;}
+			        #pause{display:none;}
+			       #infosong{width: 100%;height: auto;}
+                   #buttons{display: flex;margin: auto;width: 100%;height:45%;}
+                   #repro{width: 100%;height: 25%;display: flex;margin:auto;}
+             /*      #boxrange{width: 98%;height: auto;display: flex;position: relative;margin: auto;}*/
+                  #vol{display:none;}
+                   #pay{display:none;}
+                   #time, #tr{ position: fixed;margin-top:-1.05rem;}
+            }
+	</style>
+	<script src="../JS/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="box">
+		<audio id="myAudio" name="thali">
+				<source src="../Musica/nomeacuerdo.flac" type="audio/flac">
+		</audio>
+	</div>
+	
+	<div id="mainm">
+		<img id="bgc" src="../caratulas/no me acuerdo.jpg" alt="caratula">
+		<div id="image">
+			<img id="caratula" src="../caratulas/te_bote_remix.jpg" alt="">
+		</div>
+		<div id="player">
+			<div id="infosong">
+				<p id="songTitle">Nombre de la cancion:</p>
+			</div>
+			<div id="buttons">
+				<button id="pre"></button>
+				<button id="play"></button>
+		        <button id="next"></button>
+			</div>
+			<div id="repro">
+				<div class="minuto">
+				<p id="time">00:00</p>
+				</div>
+				<div id="boxrange">
+					<progress id="pro" value="0"></progress>
+					<input type="range" id="myDis" value="0" step="any">
+				</div>
+				<div class="minuto">
+					<p id="tr">00:00</p>
+				</div>
+			</div>
+			
+		</div>
+		<div id="vol">
+			<img src="../icons/volumen.png" alt="Volumen" id="audio">
+			<input type="range" id="volumen" value="1" min="0" max="1" step="any">
+		</div>
+		<div id="pay">
+			<button id="cpay">Comprar</button>
+		</div>
+	</div>
+<p id="t">Tiempo</p>
+	<p>Volumen</p>
+	<p id="l"></p>
+	<h3 id="m">tiempo de reproduccion</h3>
+	<p id="n"></p>
+	
+	<h2 id="ti">0:00</h2>
+	<p id="se"></p>
+	<p id="mi"></p>
+	
+	<input type="text" id="value">
+
+	<script> 
+		$('#play').click(function(){ 
+			var myAudio = document.getElementById("myAudio");
+			if (myAudio.paused) { 
+				myAudio.play();
+				//botpnpause
+				$('#play').css({backgroundColor: 'blue'})
+			} 
+			else {
+				myAudio.pause();
+				//botonplay
+				$('#play').css({backgroundColor: 'red'})
+			}
+		}).css({cursor: 'pointer'})
+		var l= document.getElementById("volumen");
+		l.oninput=function(){
+			/*$("#l").text("volumen  "+l.value)*/
+			myAudio.volume=l.value
+		}
+		var d=document.getElementById("myDis");
+		var  pro=document.getElementById("pro");
+    	myAudio.ontimeupdate=function(){
+    		d.max= myAudio.duration
+    		d.value=myAudio.currentTime;
+    		$('#se').text(myAudio.currentTime);
+    		$('#songTitle').text("Nombre  : " + myAudio.Src);
+    		d.oninput=function(){
+    		 	myAudio.currentTime=d.value
+    		}
+            
+            pro.max=myAudio.duration
+            pro.value=myAudio.currentTime
+            
+            var mm=Math.floor(myAudio.currentTime / 60)
+            var ss=Math.floor(myAudio.currentTime - mm * 60)
+            var m=Math.floor(myAudio.duration / 60)
+            var s=Math.floor(myAudio.duration - m * 60)
+            if(ss < 10) {ss = "0"+ss}
+             if(s < 10){s ="0"+s}
+            if(mm < 10) {mm = "0"+mm}
+            if(m < 10){m ="0"+m}
+            $('#time').text(mm+" : "+ss)
+            $('#tr').text(m+":"+s)
+         }
+   function mute(){
+		if(audio.muted){
+		    audio.muted = false;
+		    mutebtn.style.background = "url(images/speaker.png) no-repeat";
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.background = "url(images/speaker_muted.png) no-repeat";
+	    }
+	}
+
+     
+	/*
+	myAudio.ondurationchange = function() {
+    alert("The video duration has changed");
+};
+myAudio.onloadedmetadata = function() {
+    alert("Meta data for audio loaded");
+};
+
+myAudio.onloadeddata = function() {
+    alert("Browser has loaded the current frame");
+};
+*/
+
+
+	</script>
+	 
+	</body>
+</html>

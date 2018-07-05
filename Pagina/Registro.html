@@ -1,0 +1,249 @@
+
+	<link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+	
+	<title>Registro</title>
+	<style>
+
+		*,
+		*::after,
+		*::before{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		:root{
+			--heightnav:3rem;
+			--placeholdercolor: rgba(160,160,160,0.85);
+		}
+		*:focus {outline: none;}/*quitando el valor por defecto de :focus*/
+		.formularior{
+			box-sizing: border-box;
+			background-image:url(Imagen/fondlogin/registrom.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+		}
+		.contformregister{
+			box-sizing: border-box;
+			display: block;
+			margin: auto;
+			width: 50%;
+			height: auto;
+			background-color: rgba(0,0,0,0.75);
+		}
+		.form{
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			font-family: 'Poppins', sans-serif;
+			padding: 2%;
+		}
+
+
+		.labelte{
+			font-size: 1.5rem;
+			color: white;
+			display: block;
+			text-align: center;
+			margin: 1rem;
+		}
+		.label{
+			font-size: 1.3rem;
+			color: white;
+			display: block;
+		}
+		.name{
+			
+			width: 49%;
+			height: auto;
+			margin: auto;
+			float: left;
+		}
+		.apell{
+			
+			width: 49%;
+			height: auto;
+			margin: auto auto 1rem 2%;
+			float: left;
+		}
+		.inputn{
+			border: none;
+			border-radius: .3rem;
+			width: 100%;
+			padding: .65rem;
+			background-image: url(Imagen/icon/icouser.png);
+			background-repeat: no-repeat;
+			background-position: .3rem .3rem;
+			background-color: var(--placeholdercolor);
+			padding-left: 2.48rem;
+			font-size: 1.2rem;
+		}
+		.input{
+			border: none;
+			border-radius: .3rem;
+			margin: auto;
+			width: 100%;
+			padding: .65rem;
+			background-image: url(Imagen/icon/iconemail.png);
+			background-repeat: no-repeat;
+			background-position: .3rem .3rem;
+			background-color: var(--placeholdercolor);
+			padding-left: 2.48rem;
+			font-size: 1.2rem;
+		}
+		.inputpasw{
+			border: none;
+			border-radius: .3rem;
+			margin: 1rem auto;
+			width: 49%;
+			padding: .65rem;
+			background-image: url(Imagen/icon/icocontra.png);
+			background-repeat: no-repeat;
+			background-position: .3rem .3rem;
+			background-color: var(--placeholdercolor);
+			padding-left: 2.48rem;
+			font-size: 1.2rem;
+		}
+		.inputu{
+			border: none;
+			border-radius: .3rem;
+			margin: auto auto 1rem 1%;
+			width: 49%;
+			padding: .65rem;
+			background-image: url(Imagen/icon/icoubicaion.png);
+			background-repeat: no-repeat;
+			background-position: .3rem .3rem;
+			background-color: var(--placeholdercolor);
+			padding-left: 2.48rem;
+			font-size: 1.2rem;
+		}
+		.inputd{
+			border: none;
+			border-radius: .3rem;
+			margin: auto;
+			width: 49%;
+			padding: .65rem;
+			background-image: url(Imagen/icon/iconcalendario.png);
+			background-repeat: no-repeat;
+			background-position: .3rem .3rem;
+			background-color: var(--placeholdercolor);
+			padding-left: 2.48rem;
+			font-size: 1.2rem;
+		}
+		.sex{
+			display: flex;
+			width: 49%;
+			float:right;
+			margin: auto;
+		}
+		.labelsex{
+			display: block;
+			margin: 0 auto auto auto;
+			color: white;
+			font-size: 1rem;
+		}
+		.submitregs{
+			
+			width: 15rem;
+			height: 3rem;
+			font-size: 1.3rem;
+			display: block;
+			margin: 2rem auto 2rem;
+			border-radius: .6rem;
+			border: none;
+			background-color: rgba(11,114,96,1);
+			color: white;
+			cursor: pointer;
+		}
+		.submitregs:hover{
+			background-color: red;
+		}
+		@media screen and (max-width: 810px) {
+
+			.contformregister{width: 95%;height: auto;transition: all 1.5s;}
+			.name{width: 100%;font-size: 1.2rem;}
+			.apell{width: 100%;margin-left: 0;font-size: 1.2rem;}
+			.inputpasw{width: 100%;}
+			.inputu{width: 100%;margin-left: 0;}
+
+
+		}
+		</style>
+
+	<div class="formularior">
+
+		<div class="contformregister">
+			<form action="../index.html" class="form" method="get">
+				<label class="labelte" for="registrame">Registrate con tu dirección de email</label>
+				<div class="name">
+					<label class="label" for="nombre">Nombre completo</label>
+					<input class="inputn" id="inputn" type="text" placeholder="nombre" name="Nombre">
+				</div>
+				<div class="apell">
+					<label class="label" for="conntraseña">Apellidos</label>
+					<input class="inputn" type="text" placeholder="apellidos" name="Apellido">
+				</div>
+
+				<input class="input" type="email" placeholder="nombre@example.com" name="Email">
+				<input class="inputpasw" type="password" placeholder="contraseña" name="Contraseña">
+
+				<select class="inputu" name="pais" id="pais">
+					<option value="">Argentina</option>
+					<option value="">Bolivia</option>
+					<option value="">Chile</option>
+					<option value="">Colombia</option>
+					<option value="">Costa Rica</option>
+					<option value="">Cuba</option>
+					<option value="">Ecuador</option>
+					<option value="">El Salvador</option>
+					<option value="">España</option>
+					<option value="">Guatemala</option>
+					<option value="">Guinea Ecuatorial</option>
+					<option value="">Honduras</option>
+					<option value="">México</option>
+					<option value="">Nicaragua</option>
+					<option value="">Panamá</option>
+					<option value="">Paraguay</option>
+					<option value="" selected>Perú</option>
+					<option value="">República Dominicana</option>
+					<option value="">Uruguay</option>
+					<option value="">Venezuela</option>
+				</select>
+				<label class="label" for="">Fecha de nacimiento</label>
+				
+				<input class="inputd" type="date">
+				<div class="sex">
+					<label class="labelsex"><input type="radio" name="sex" value="Hombre">Hombre</label>
+					<label class="labelsex"><input type="radio" name="sex" value="Mujer">Mujer</label>
+					<label class="labelsex"><input type="radio" name="sex" value="Otro">Otro</label>
+				</div>
+				<label ><input type="checkbox" id="check">Acepto todos los terminos y condiciones</label>
+				
+				<input class="submitregs" type="submit" value="Registrarme"  >
+
+			</form>
+		</div>	
+	</div>
+	<script src="../JavaScript/jquery.min.js"></script>
+	<script>
+		$(document).on('ready', registro())
+		function registro(){
+			id
+			}
+					
+			/*
+		$(".micheckbox").on( 'change', function() {
+    if( $(this).is(':checked') ) {
+        // Hacer algo si el checkbox ha sido seleccionado
+        alert("El checkbox con valor " + $(this).val() + " ha sido seleccionado");
+    } else {
+        // Hacer algo si el checkbox ha sido deseleccionado
+        alert("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
+    }
+});*/
+	</script>
+
+

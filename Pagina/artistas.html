@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>Artistas</title>
+	
+	<style>
+		::-webkit-scrollbar {width: 4px;height: 4px;}
+		::-webkit-scrollbar-track {background-color: rgba(225,225,225,1.00);}
+		::-webkit-scrollbar-thumb {background-color: rgba(189,140,211,1.00);}
+		::-webkit-scrollbar-thumb:hover {background-color:rgba(133,50,168,1.00);cursor: pointer;}
+
+		*,
+		*::after,
+		*::before{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		#artistabaner{
+			width: 100%;
+			height: 100vh;
+			background-image: url(../baner/Concierto.jpg);
+			background-attachment: local;
+			background-size: cover;
+		}
+		.genero{
+			width: 75%;
+			height: 22rem;
+			margin: auto;
+			overflow: auto;
+			display: flex;
+		}
+		.artista{
+			clip-path: circle(45% at center);
+			width: 15rem;
+			height: auto;
+		}
+
+		.nameartista{
+			display: block;
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.2rem;
+			text-align: center;
+			
+		}
+		article{
+			width: 15rem;
+			margin: auto;
+			
+		}
+		.infoartista{
+			display: none;
+			 
+		}
+		#b{
+			display: none;
+		}
+		.tge{
+			display: block;
+			width: 80%;
+			margin:  1rem auto 0;
+			font-size: 3rem;
+		}
+		.tge:hover{
+			background-color: rgba(208,208,208,1.00);
+			border-radius: .7rem;
+			transition: all .5s;
+		}
+		.modal{
+			display: flex;
+			position: fixed;
+			z-index: 5;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 60%;
+			height: auto;
+			background-color: rgba(255,255,255,1);
+			color: rgba(163,163,163,1.00);
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.05rem;
+			box-shadow: 3px 3px 10px 3px rgba(0,0,0,.3);
+		}
+		.modalinfo{
+			display: block;
+			width: 90%;
+			height: auto;
+			margin: auto;
+			padding: 2rem;
+			display: 'block';
+		}
+		/*
+		clip-path: polygon(0 0, 100% 0, 0 100%);
+		*/
+	</style>
+	<script src="../JS/jquery.min.js"></script>
+</head>
+<body>
+	<header id="artistabaner"></header>
+	<h2 class="tge">Musica Latina</h2>
+	<div class="genero">
+		
+	<article id="dy">
+		<div class="overlay"></div>
+			<img class="artista" src="../artista/daddyanque.jpg" alt="daddy yanque">
+	
+		
+		
+		<h3 class="nameartista">Daddy Yankee</h3>
+		
+		<div class="infoartista">
+			<span>&times;</span>
+			<p class="info">Daddy Yankee hizo más que nadie para establecer al regatón como un estilo musical vendible. Su éxito fue tan fenomenal, después de su triunfal éxito masivo de 2004, Barrio Fino –y particularmente el hit internacional "Gasolina"– que traspasó las barreras culturales y encasillamientos de género, y lo convirtió en una marca registrada internacional. En la época de El Cartel: The Big Boss (2007), por ejemplo, su nombre, imagen y música fueron usados para vender gaseosas y calzado, también un show para ABC Radio Networks, Daddy Yankee on Fuego, y una película de Paramount Pictures, Talento de Barrio. ~ Jason Birchmeier <br><br>
+					CIUDAD NATAL <br>
+					San Juan, Puerto Rico
+					GÉNERO <br>
+				Urbano latino
+				NACIMIENTO <br>
+				3 de feb. de 1977
+			</p>
+		</div>
+		
+	</article>
+	<article id="kg">
+		<img class="artista" src="../artista/karolg.jpg" alt="karolg">
+		<h3 class="nameartista">Becky G</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+			<p>Acerca de Becky G <br>
+				CIUDAD NATAL <br>
+				Inglewood, CA <br>
+ 
+				GÉNERO <br>
+				Pop <br>
+ 
+			NACIMIENTO <br>
+			2 de mar. de 1997</p>
+		</div>
+		
+
+	</article>
+	<article id="ny">
+		<img class="artista" src="../artista/nickyjam.jpg" alt="nicky jam">
+		<h3 class="nameartista">Nicky Jam</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>One of reggaeton's most prolific artists, the Pina Records-affiliated Nicky Jam has collaborated over the years with a long list of performers, including superstars such as Daddy Yankee and RKM & Ken-Y, and he has released plenty of solo material as well, including popular albums such as Vida Escante (2004) and The Black Carpet (2007).
+
+Despite Jam's success, he felt he could do more, and decided to move to Colombia in 2010. It proved to be just the career rejuvenation he needed, resulting in a parade of underground hits including "Tu Primera Vez," "Curiosidad," and "Voy a Beber." By 2014 he was charting consistently again, first with the single "Travesuras" and then in early 2015 with "Si Tu No Estas." Both songs appeared on Greatest Hits, Vol. 1. In the spring of 2015, his duet with Enrique Iglesias on "El Perdon" became his first single to hit number one on the Latin charts, and crossed over to the pop charts. After winning accolades at the 2015 Latin American Music Awards and Latin Grammy Awards, as well as the 2016 Lo Nuestro Awards, Jam worked on his first studio album since 2007. Fénix appeared on Sony Music in 2017. The album hit the Top 30 of the Billboard 200, Jam's first appearance on the chart. The single "X," featuring J Balvin, appeared in 2018. ~ Jason Birchmeier
+<br><br>HOMETOWN <br> Boston, MA <br>GÉNERO <br>Urbano latino<br>NACIDO <br>17 de marzo de 1981</p>
+</div>
+	</article>
+	<article id="ng">
+		<img class="artista" src="../artista/niogarcia.jpg" alt="nio garcia">
+		<h3 class="nameartista">Nio Garcia</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+			<p>CIUDAD NATAL<br>San Juan, Puerto Rico<br>GÉNERO<br>Música latina</p>
+		</div>
+		
+
+	</article>
+	<article id="nn">
+		<img class="artista" src="../artista/nattinatasha.jpg" alt="Natti Natasha">
+		<h3 class="nameartista">Natti Natasha</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+			
+		
+		<p>Acerca de Natti Natasha 
+Natti Natasha (cuyo nombre de nacimiento es Natalia Alexandra Gutiérrez) es una cantante de reggaeton, urbana y pop latina que encabeza la lista de éxitos. Con el mentor de Don Omar, ella no solo ha tocado la campana en la parte superior de las listas de éxitos latinos en las Américas y España, sino que constantemente se ha colocado en el Top Ten.
+
+Junto con las giras y la apertura de Don Omar y otras estrellas, fue presentada por nombre en su número cinco "Perdido en Tus Ojos" en 2015. La exposición que recibió como resultado de su video no tuvo precedentes: alcanzó 150 millones de visitas . Natasha se convirtió en un colaborador en demanda. Trabajó con Ozuna en "Criminal" en 2017, que llegó a los Top Five: su video superó los mil millones de reproducciones. Ese mismo año, trabajó con Daddy Yankee en el sencillo y el video de "Otra Cosa" que acumuló 56 millones de visitas. En enero de 2018, encabezó el sencillo de "Amantes de Una Noche", con la estrella de la trampa latina Bad Bunny. Su video trazó 95 millones de visitas durante las tres semanas posteriores a su lanzamiento, y proporcionó una exposición significativa como el prelanzamiento de su segundo álbum, Natty Nash. ~ Thom Jurek<br><br>
+HOMETOWN<br>
+República Dominicana<br>
+GÉNERO<br>
+Latin Urban<br>
+NACIDO<br>
+1986</p>
+		</div>
+	</article>
+	<article id="bb">
+		<img class="artista" src="../artista/badbuny.jpg" alt="Bad Bunny">
+		<h3 class="nameartista">Bad Bunny</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+					<p>Acerca de Bad Bunny<br>
+CIUDAD NATAL<br>
+San Juan, Puerto Rico<br>
+ 
+GÉNERO<br>
+Urbano latino<br></p>
+			
+			</div>
+
+	</article>
+	<article id="sr">
+		<img class="artista" src="../artista/sofiareyes.jpg" alt="sofia reyes">
+		<h3 class="nameartista">Sofia Reyes</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Sofia Reyes
+Sofia Reyes es una cantante pop mexicana de dance pop, reggaeton y balada. Nacida en Monterrey en 1995, Reyes comenzó a cantar y tocar el piano desde los diez años. Tras darse a conocer como actriz en la telenovela juvenil Mi linda Anabella y como integrante del grupo femenino TAO, Reyes fue contratada por Prince Royce para su sello D'Leon Records. En 2014 su sencillo "Muévelo", con la participación de Wisin, permaneció varias semanas en el Top 20 de la lista Billboard Latin Pop. Durante los dos años siguientes Reyes fue consolidando su popularidad a través de giras internacionales y sencillos en inglés y español, incluyendo colaboraciones con Kendall Schmidt, Reykon y Prince Royce. Su primer álbum, Louder!, finalmente apareció en febrero de 2017.
+ <br><br>
+CIUDAD NATAL<br>
+Monterrey, Nuevo León, Mexico<br>
+GÉNERO<br>
+Pop en español<br>
+NACIMIENTO<br>
+1995<br></p>
+			</div>
+	</article>
+	<article id="t">
+		<img class="artista" src="../artista/thalia.jpg" alt="thalia">
+		<h3 class="nameartista">Thalía</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Sobre Thalía
+La mexicana Thalía es una de las cantantes, compositoras y actrices más famosas en la historia del país. Conocida como la "Reina del pop latino" por su fama dentro de la escena de la música pop latina desde la década de 1980, ha vendido más de 25 millones de discos y numerosos premios, incluyendo múltiples Premios Juventud y Lo Nuestro, y numerosas nominaciones al Latin Grammy.
+
+
+Después de un largo descanso para concentrarse en la familia y luego filmar un DVD en vivo, Thalía regresó con Habítame Siempre en 2012. Rápidamente escaló la tabla pop latina. El año 2014 vio al cantante lanzar dos álbumes: Viva Kids, vol. 1 en México (su primer disco infantil), que recibió una nominación para un Premio Grammy Latino, y Amore Mio, que alcanzó el primer lugar en las listas de éxitos de México y quebró el Top 200 en los Estados Unidos. Engendró dos singles de gráficos. Después de las giras mexicanas y estadounidenses, Thalía lanzó su primera colección de moda en Estados Unidos con Macy's en 2015, y pasó un tiempo en el camino promoviéndolo.
+
+Thalía emitió el sencillo pre-lanzamiento "Desde Esa Noche" - con un spot invitado por el cantante de reggaeton Maluma - un año después. El corte llegó al Top 20 de la lista Hot Latin Songs y alcanzó el número cinco en Latin Pop Songs. Sergio George produjo Latina el siguiente mes de mayo. Hubo varias apariciones destacadas entre sus 13 pistas por Silvestre Dangond, De La Ghetto, Chiky Bom Bom "La Pantera", One Moment, y OMI y Jacob Forever. Encabezó la tabla de Álbumes Pop Latin dentro de una semana de lanzamiento y permaneció en la lista durante 26 semanas. ~ Jason Birchmeier.
+<br><br>
+ 
+HOMETOWN<br>
+Ciudad de México, México<br>
+GÉNERO<br>
+Pop Latino<br>
+NACIDO<br>
+26 de agosto de 1971<br></p></div>
+	</article>
+	<article id="o">
+		<img class="artista" src="../artista/ozuna.jpg" alt="ozuna">
+		<h3 class="nameartista">Ozuna</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Ozuna
+Nacido en 1992 en San Juan, Puerto Rico, Jan Carlos Ozuna Rosado es un cantante y compositor de reggaeton que se caracteriza por el carácter positivo de su música y por rehusarse a emplear malas palabras en sus letras, algo bastante inusual en el género. En 2014 firmó su primer contrato discográfico y rápidamente comenzó a hacerse conocido gracias a sencillos como "Tu marido no te quiere". En 2016 una remezcla de su canción "No quiere enamorarse" con la participación de Daddy Yankee acumuló inmediatamente millones de visitas en YouTube. Al año siguiente Ozuna publicó su álbum debut Odisea, que incluía colaboraciones con De La Ghetto, Anuel AA y J Balvin, entre otros.
+ <br><br>
+CIUDAD NATAL<br>
+San Juan, Puerto Rico<br>
+GÉNERO<br>
+Urbano latino<br>
+NACIMIENTO<br>
+13 de mar. de 1992<br></p></div>
+	</article>
+	<article id="jb">
+		<img class="artista" src="../artista/jblavin.jpg" alt="J Balvin">
+		<h3 class="nameartista">J Balvin</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de J Balvin
+J. Balvin es el nombre artístico de José Álvaro Osorio Balvin, un cantante de pop latino nacido en Medellín, Colombia. Balvin creció escuchando rap, champeta, bachata y reggae, además de mirando videos musicales e inventando sus propios pasos de baile. Tras ser contratado por EMI Colombia, en 2009 lanzó su primer sencillo, "Ella me cautivó", seguido en 2010 por Real, su álbum debut de larga duración. En 2013 Balvin publicó su segundo trabajo, La familia, con el que comenzó a expandir su fama más allá de Colombia. Su consagración internacional definitiva llegaría en 2015 con el sencillo "Ginza", el cual permaneció 21 semanas al tope de la Hot Latin Songs de Billboard. Su tercer álbum, Energía, fue lanzado en junio de 2016.
+ <br><br>
+CIUDAD NATAL<br>
+Medellin, Colombia<br>
+GÉNERO<br>
+Urbano latino<br>
+NACIMIENTO<br>
+7 de may. de 1985<br></p></div>
+	</article>
+	<article id="m">
+		<img class="artista" src="../artista/maluma.jpg" alt="maluma">
+		<h3 class="nameartista">Maluma</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Maluma
+Maluma (Juan Luis Londoño Arias) es un intérprete colombiano de música urbana latina. En 2011, cuando contaba con solo 17 años, Maluma editó un primer sencillo, "Farandulera", con el que atrajo el interés de Sony Music. Al año siguiente ya tenía listo su álbum debut, Magia, que incluía varios temas de éxito como "Obsesión", "Loco" y "Miss Independent". Su siguiente sencillo, "La temperatura", le valió una nominación al Grammy Latino 2013. Convertido en una estrella internacional, Maluma regresó en 2015 con su segundo trabajo, Pretty Boy Dirty Boy, producido por Walter Kolm. Durante 2016 se mantuvo constantemente al tope de los rankings gracias a una seguidilla de sencillos y colaboraciones con artistas como Thalía, Yandel, Noriel, Arcángel, Ñengo Flow, Ricky Martin, Anitta y Shakira.
+ <br><br>
+CIUDAD NATAL<br>
+Medellin, Colombia<br>
+GÉNERO<br>
+Urbano latino<br>
+NACIMIENTO<br>
+28 de ene. de 1994<br></p></div>
+	</article>
+	<article id="do">
+		<img class="artista" src="../artista/donomar.jpg" alt="don omar">
+		<h3 class="nameartista">Don Omar</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Don Omar
+Don Omar se convirtió en una de las primeras superestrellas internacionales del reggaeton, gracias a su trabajo con Luny Tunes, pero más aún gracias a su himno "Reggaeton Latino," (2005) que fue uno de los primeros éxitos genuinos del cruce de géneros. Inicialmente, Omar produjo y escribió canciones para Héctor & Tito, pero éstos pronto le dieron la oportunidad de unir su voz a la de ellos, y así fue en "A la Reconquista". Su álbum debut, The Last Don (2003), marcó un hito para el movimiento reggaeton. King of Kings (2006), su segundo álbum, ocupó el octavo puesto de la lista de Billboard 200 convirtiéndose en el primer álbum de reggaeton en trepar hasta los diez más vendidos. ~ Jason Birchmeier
+ <br><br>
+CIUDAD NATAL<br>
+Villa Palmeras, Puerto Rico<br>
+GÉNERO<br>
+Urbano latino<br>
+NACIMIENTO<br>
+10 de feb. de 1978<br></p></div>
+	</article>
+	<article id="f">
+		<img class="artista" src="../artista/farruko.jpg" alt="farruko">
+		<h3 class="nameartista">Farruko</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Farruko
+Farruko es el nombre artístico de Carlos Efren Reyes, un cantante de reggaeton nacido en Bayamón, Puerto Rico en 1991. Aún adolescente, Farruko comenzó a subir temas a internet y a conseguir seguidores en las redes sociales, lo que le posibilitó grabar su álbum debut El Talento Del Bloque en 2010, cuando sólo contaba con 18 años de edad. Farruko poco tardó en convertirse en una estrella del género, editando en rápida sucesión T.M.P.R. (2012), Imperio Nazza: Farruko Edition (2013), Los Menores (2014) y Visonary (2015) y colaborando con artistas como Daddy Yankee, Sean Paul, Yandel, Wisin, Arcángel, Wisin o Nicky Jam, entre muchos otros. En 2017 regresó con Trapficante, una aproximación al naciente trap latino junto a colaboradores como Sharo Torres, Mambo Kingz, Maffio o DJ Luian.
+ <br><br>
+CIUDAD NATAL<br>
+Bayamon, Puerto Rico<br>
+GÉNERO<br>
+Urbano latino<br>
+NACIMIENTO<br>
+2 de may. de 1991<br></p></div>
+	</article>
+	<article id="ayf">
+		<img class="artista" src="../artista/alexisyfido.jpg" alt="alexis y fido">
+		<h3 class="nameartista">Alexis Y Fido</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Alexis Y Fido
+Aunque Raul "Alexis" Ortiz y Joel "Fido" Martínez eran conocidos en el ambiente del reggaeton puertorriqueño desde adolescentes, no unieron fuerzas hasta 2001 para la compilación Desafío. Había lugar para un solo tema y grabaron juntos "El Nalgazo". Continuaron como un dúo, contribuyendo en compilaciones y compilados caseros, incluyendo el éxito regional "El Tiburón" en Luny Tunes Mas Flow, vol. 2. Apodados los Pitbulls, por su hábito de ladrar durante su actuación, Alex y Fido lanzaron su disco Los Pitbulls en 2005. El disco llegó al cuarto lugar en la lista de los álbumes latinos y pasaron a figurar en los Billboards 200. ~ Marisa Brown
+ <br><br>
+ORIGEN<br>
+Cayey, Puerto Rico<br>
+GÉNERO<br>
+Urbano latino<br>
+SE FORMÓ EN<br>
+2001<br></p></div>
+	</article>
+	</div>
+	<div class="genero">
+	<article id="dg">
+		<img class="artista" src="../artista/davidguetta.jpg" alt="David Guetta">
+		<h3 class="nameartista">David Guetta</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de David Guetta
+DJ, remezclador y productor, el francés David Guetta pertenece a una camada de artistas que combinan la elegancia de la música house de Daft Punk con la energía de la música electrónica festiva. Guetta solamente comenzó a publicar sencillos propios a partir de 2001 con "Just A Little More Love", aduciendo que solo es capaz de producir buena música mientras se divierte. Desde entonces se ha convertido en una superestrella mundial gracias a éxitos como "When Love Takes Over", "Sexy Bitch", "Where Them Girls At", "Titanium" y "Turn Me On". Además de sus numerosos discos de remezclas, de sus propios álbumes o pertenecientes a la serie F*** Me I'm Famous, Guetta llevaba publicados seis discos de estudio hasta 2017, entre ellos el multi-platino One Love (2009).
+ <br><br>
+CIUDAD NATAL<br>
+Paris, France<br>
+GÉNERO<br>
+Dance<br>
+NACIMIENTO<br>
+7 de nov. de 1967<br></p></div>
+	</article>
+	<article id="a">
+		<img class="artista" src="../artista/avici.jpg" alt="Avicii">
+		<h3 class="nameartista">Avicii</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Avicii
+Avicii era el nombre artístico del sueco Tim Bergling, uno de los protagonistas excluyentes de la fértil escena sueca de música house del nuevo milenio. DJ, productor, remezclador y compositor, Avicii se destacó por su capacidad para realizar bases rítmicas contagiosas y crear un sonido house de fuerte impronta melódica inspirado en artistas como Daft Punk o Steve Angello. Entre sus numerosos logros se cuentan éxitos mundiales como "Wake Me Up!", “Waiting for Love" o su colaboración con Coldplay "A Sky Full of Stars", además de remezclas de temas de artistas como Robyn y Dizzee Rascal. Tras retirarse de los escenarios en 2016 por razones de salud, en un documental reveló su sufrimiento debido al stress y la ansiedad. Bergling falleció inesperadamente a los 28 años en abril de 2018.
+ <br><br>
+CIUDAD NATAL<br>
+Stockholm, Sweden<br>
+GÉNERO<br>
+Dance<br>
+NACIMIENTO<br>
+8 de sep. de 1989<br></p></div>
+	</article>
+	<article id="h">
+		<img class="artista" src="../artista/hardwell.jpg" alt="Hardwell">
+		<h3 class="nameartista">Hardwell</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Hardwell
+Hardwell, cuyo nombre verdadero es Robbert van de Corput, es un DJ y productor holandés de música house y electrónica nacido en Breda en 1988. Un talento precoz, Hardwell comenzó su carrera aún adolescente y obtuvo su primer gran éxito internacional en 2009 con "Show Me Love vs. Be", que sonó en discotecas de toda Europa. Su reputación continuó en ascenso gracias a sus presentaciones, remezclas, producciones (se destacan "Encoded" "Cobra" en 2011 y "Spaceman" en 2012), además de algunas colaboraciones con su mentor Tiësto, en particular "Zero 76". En 2010 creó Revealed Recordings, su propia etiqueta discográfica, a través de la cual edita la serie de compilados Hardwell Presents Revealed. Al año siguiente lanzó su programa de radio y podcast Hardwell On Air. En 2012 llegó a ocupar el sexto lugar en la lista de los mejores DJ del mundo publicada por la influyente revista DJ Mag. ~ Mariano Prunes
+ <br><br>
+CIUDAD NATAL<br>
+Breda, The Netherlands<br>
+GÉNERO<br>
+Dance<br>
+NACIMIENTO<br>
+7 de ene. de 1988<br></p></div>
+	</article>
+	<article id="ti">
+		<img class="artista" src="../artista/tiesto.jpg" alt="tiesto">
+		<h3 class="nameartista">Tiësto</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		<p>Acerca de Tiësto
+Debido en parte a sus legendarias actuaciones en vivo de seis horas, Tiësto se ha elevado a alturas míticas como uno de los más importantes DJs de trance. Summerbreeze (2000) marcó su debut en los Estados Unidos, un álbum de mezclas que incluía su remix de "Silence", de Delerium. El remix pasó cuatro semanas en el Top Ten del Reino Unido, llegó al número tres en las listas de dance de Billboard, y continuó permaneciendo como una de las pistas más influyentes de la era del dance progresivo. Tiësto ha producido muchos remixes con cantantes femeninas que abarcan todo el espectro, entre ellos pistas de Chicane, Leigh Nash de Sixpence None the Richer (en "Innocente", de Delerium) y Faithless. ~ Robert Evanoff
+ <br><br>
+CIUDAD NATAL<br>
+Breda, The Netherlands<br>
+GÉNERO<br>
+Dance<br>
+NACIMIENTO<br>
+17 de ene. de 1969<br></p></div>
+	</article>
+	<article id="avb">
+		<img class="artista" src="../artista/arminvanbuner.jpg" alt="armin van buuner">
+		<h3 class="nameartista">Armin van Buuren</h3>
+		<div class="infoartista">
+			<span>&times;</span>
+		
+		<p>Acerca de Armin van Buuren
+DJ y productor holandés de música trance nacido en Leiden en 1976. Inspirado por artistas como Klaus Schulze y Jean Michel Jarre, van Buuren se apasionó por la música electrónica en su adolescencia y antes de cumplir los veinte años ya trabajaba como DJ. En 1995 tuvo su primer hit con "Blue Fear" y en 1999 creó su propio sello, Armind. Ya considerado uno de los mejores DJ del mundo, van Buuren logró mantenerse en la cima gracias a sus presentaciones en vivo, sus frecuentes colaboraciones con otros artistas y sus numerosos lanzamientos, tanto de discos de material original como de la serie de remezclas A State of Trance, el resumen anual de su popular emisión radial del mismo nombre. El decimocuarto volumen de la serie apareció en 2017.
+ <br><br>
+CIUDAD NATAL<br>
+Leiden, The Netherlands<br>
+GÉNERO<br>
+Dance<br>
+NACIMIENTO<br>
+25 de dic. de 1976<br></p></div>
+	</article>
+	</div>
+	<a href="artistas.html" download>descargas</a>
+	<!-- 
+	<article id="">
+		<img class="artista" src="" alt="">
+		<h3 class="nameartista"></h3>
+	</article>-->
+	<script>
+		/*$(document).live(function(){
+			$('#artistabaner').fadeOut(function(){
+				$('#artistabaner').fadeIn().attr('background-image, url(../baner/audio.jpg);')
+			})
+		})*/
+		$(document).ready(function(){
+			$('.artista').mouseover(function(){
+				$(this).css({transform: 'scale(1.2)',
+							transition: 'all .5s',
+							 cursor: 'pointer',
+							 filter:'brightness(.35)'
+							})
+				$('.overlay').css({display:'block'})
+
+			}).mouseout(function(){
+				$(this).css({transform: 'none',
+							filter: 'none'})
+			})
+					
+
+			$('span').click(function(){
+					$('.infoartista').fadeOut()
+				}).css({
+				fontSize:'3.5rem',
+				position:'absolute',
+				cursor:'pointer',
+				float: 'right',
+				color:'red',
+				margin: '0 95%'
+			})
+			
+		})
+		$('.nameartista').mouseover(function(){
+			$(this).css({
+				textDecoration:'underline',
+				color:'rgba(26, 140, 255,1)',
+				cursor:'pointer',transition: 'all .3s',
+			fontSize: '1.3rem'})
+		}).mouseout(function(){
+			$(this).css({
+				textDecoration:'none',
+				color: 'black',
+				fontSize: '1.2rem'
+			})
+		})
+		$('.nameartista:eq(0)').click(function(){
+				$('.infoartista:eq(0)').fadeIn().addClass('modal')
+				$('p:eq(0)').fadeIn().addClass('modalinfo')
+				
+			})
+		$('.nameartista:eq(1)').click(function(){
+			$('.infoartista:eq(0)').fadeOut()
+			$('.infoartista:eq(1)').fadeIn().addClass('modal')
+			$('p:eq(1)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(2)').click(function(){ 
+			$('.infoartista:eq(2)').fadeIn().addClass('modal')
+			$('p:eq(2)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(3)').click(function(){
+			$('.infoartista:eq(3)').fadeIn().addClass('modal')
+			$('p:eq(3)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(4)').click(function(){
+			$('.infoartista:eq(4)').fadeIn().addClass('modal')
+			$('p:eq(4)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(5)').click(function(){
+			$('.infoartista:eq(5)').fadeIn().addClass('modal')
+			$('p:eq(5)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(6)').click(function(){
+			$('.infoartista:eq(6)').fadeIn().addClass('modal')
+			$('p:eq(6)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(7)').click(function(){
+			$('.infoartista:eq(7)').fadeIn().addClass('modal')
+			$('p:eq(7)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(8)').click(function(){
+			$('.infoartista:eq(8)').fadeIn().addClass('modal')
+			$('p:eq(8)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(9)').click(function(){
+			$('.infoartista:eq(9)').fadeIn().addClass('modal')
+			$('p:eq(9)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(10)').click(function(){
+			$('.infoartista:eq(10)').fadeIn().addClass('modal')
+			$('p:eq(10)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(11)').click(function(){
+			$('.infoartista:eq(11)').fadeIn().addClass('modal')
+			$('p:eq(11)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(12)').click(function(){
+			$('.infoartista:eq(12)').fadeIn().addClass('modal')
+			$('p:eq(12)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(13)').click(function(){
+			$('.infoartista:eq(13)').fadeIn().addClass('modal')
+			$('p:eq(13)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(14)').click(function(){
+			$('.infoartista:eq(14)').fadeIn().addClass('modal')
+			$('p:eq(14)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(15)').click(function(){
+			$('.infoartista:eq(15)').fadeIn().addClass('modal')
+			$('p:eq(15)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(16)').click(function(){
+			$('.infoartista:eq(16)').fadeIn().addClass('modal')
+			$('p:eq(16)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(17)').click(function(){
+			$('.infoartista:eq(17)').fadeIn().addClass('modal')
+			$('p:eq(17)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(18)').click(function(){
+			$('.infoartista:eq(18)').fadeIn().addClass('modal')
+			$('p:eq(18)').fadeIn().addClass('modalinfo')
+		})
+		$('.nameartista:eq(19)').click(function(){
+			$('.infoartista:eq(19)').fadeIn().addClass('modal')
+			$('p:eq(19)').fadeIn().addClass('modalinfo')
+		})
+		
+		$('p').addClass('info')
+//		console.log('cant'+$('p').length)
+	</script>
+</body>
+</html>

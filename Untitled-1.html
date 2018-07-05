@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/*
+ //setInterval
+
+   var cronometro;
+
+
+
+    function detenerse() { 
+clearInterval(carga());}
+
+
+   function carga(){
+       contador_s =0;
+       contador_m =0;
+s = document.getElementById("segundos");
+m = document.getElementById("minutos");
+ cronometro = setInterval(
+ function(){
+     if(contador_s==60) {
+          contador_s=0;
+          contador_m++; 
+          m.innerHTML = contador_m;
+          if(contador_m==60) {
+               contador_m=0;
+              }
+       }
+       s.innerHTML =contador_s;
+                    contador_s++;
+     if(contador_m++=2 && contador_s++=31){
+            detenerse();
+       }
+,1000);
+}*/
+</script>
+<style>
+
+progress {
+    -webkit-appearance: ;
+	background-color: transparent;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 10em;
+    vertical-align: -0.2em;
+}
+	</style>
+<h1>Convertir segundos a formato hora en Javascript</h1>
+
+<script>
+  
+  segundos = 1341;
+  var d=new Date(segundos*1000);
+  
+  var hora = (d.getHours()==0)?23:d.getHours()-1;
+
+var hora = (hora<9)?"0"+hora:hora;
+
+var minuto = (d.getMinutes()<9)?"0"+d.getMinutes():d.getMinutes();
+
+var segundo = (d.getSeconds()<9)?"0"+d.getSeconds():d.getSeconds();
+
+
+  
+  
+document.getElementById("reloj").innerHTML = hora+':'+minuto+':'+segundo;
+
+</script>
+
+
+
+</head>
+<body onload="carga()">
+
+<p id="c"></p>
+<p id="reloj"></p>
+<script>
+function muestraReloj() { 
+var fechaHora = new Date();
+var horas = fechaHora.getHours();
+ var minutos = fechaHora.getMinutes();
+ var segundos = fechaHora.getSeconds();
+ var sufijo = ' am'; if(horas > 12) { horas = horas - 12; sufijo = ' pm'; }
+ 
+    if(horas < 10) {
+  horas = '0' + horas; } 
+  if(minutos < 10) { 
+  minutos = '0' + minutos; }
+  if(segundos < 10) {
+   segundos = '0' + segundos; }   document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos+sufijo; }
+      window.onload = function() { setInterval(muestraReloj, 1000); }
+    
+      
+</script>
+	<progress max="100" value="20"></progress>
+</body>
+</html>

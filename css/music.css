@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+*:focus{outline: none;}
+#mainm{
+	width: 100vw;
+	height: 15vh;
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+#image{
+	width: 10%;
+	height: auto;
+	}
+#caratula{
+	padding: 8%;
+	width: 100%;
+	height: auto;
+}
+#boxoculto{width: 100%;height: 1.5rem;position: absolute;display: flex;}
+#oculto{width: 5rem;height: 1.5rem;margin: auto;cursor: pointer;}
+#player{
+	box-sizing: border-box;
+	display: flex;
+	margin: auto;
+	width: 80%;
+	height: 100%;
+}
+#infosong{
+	font-family: 'Poppins', sans-serif;
+	width: 20%;
+	height: 8rem;
+	display: flex;
+}
+#songTitle{
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	color: white;
+}
+#buttons{
+	display: flex;
+	margin: auto;
+	width: 15%;
+	height: 100%;
+}
+#pre, #next{
+	display: block;
+	border-radius: 50%;
+	width: 1.4rem;
+	height: 1.4rem;
+	margin: auto;
+	opacity: .5;
+	background-color: transparent;
+	background-repeat:-no-repeat;
+} 
+#play{
+	border-radius:50%;
+	width: 3rem;
+	height: 3rem;
+	margin: auto;
+	opacity: .5;
+	background-color: transparent;
+	background-repeat:no-repeat;
+}
+
+#pre:hover, #next:hover, #play:hover,#audio:hover{opacity: 1;cursor: pointer;}
+#boxrange{
+	width: 80%;
+	height: .3rem;
+	display: block;
+	position: relative;
+	margin: auto;
+}
+#pro{
+	width:100%;
+	height: .3rem;
+	position: absolute;
+	
+	display: block;
+	background-color: transparent;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+#repro{
+	width: 60%;
+	height: 100%;
+	display: flex;
+}
+
+#myDis{
+	-webkit-appearance:none;
+	background-color: transparent;
+	width:100%;
+	height: .3rem;
+	position: absolute;
+}
+#myDis::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50%;
+	background-color: darkgreen;
+	box-shadow: 1px 1px 2px 1px rgba(2,30,2,1.00);
+	cursor: pointer;
+}
+#myDis::-webkit-slider-runnable-track{
+	cursor: pointer;
+	background-color: none;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	position: sticky;
+}
+.minuto{
+	width: 20%;
+	height: 100%;
+	display:flex;
+}
+#time, #tr{
+	font-family: 'Poppins', sans-serif;
+	margin: auto;
+	color: white;
+	font-size: 1.1rem;
+}
+#vol{
+	width: 25%;
+	height: 100%;
+	
+	display: flex;
+}
+#volumen{
+	-webkit-appearance:none;
+	background-color: rgba(128,128,128,1.00);
+	width: 80%;
+	height: .3rem;
+	border-radius: 50px;
+	margin: auto;
+	cursor: pointer;
+}
+#audio{
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: auto;
+	opacity: .5;
+}
+#volumen::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	background-color: green;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50px;
+	box-shadow: 1px 1px 2px 1px rgba(2,30,2,1.00);
+}
+
+#pay{
+	width: 10%;
+	height: auto;
+	display: flex;
+}
+#cpay{
+	width: 90%;
+	padding: 3%;
+	font-size: 1.2rem;
+	border: none;
+	background-color: rgba(231,122,16,1.00);
+	color: white;
+	border-radius: 10px;
+	margin: auto;
+}
+#cpay:hover{
+	background-color: rgba(171,84,0,1.00);
+}
+#bgc{
+	position: absolute;
+	filter:blur(10px);
+	width:100%;
+	height:100%;
+	z-index: -10;
+}
+.w{display: flex;}
+@media screen and (max-width: 810px) {
+	       #mainm{width:100vw;height:20vh;}
+	       #image{display:none}
+	       #player{width:100vw; height:100%;display:block;}
+	        #pause{display:none;}
+	       #infosong{width: 100%;height: auto;}
+           #buttons{display: flex;margin: auto;width: 100%;height:45%;}
+           #repro{width: 100%;height: 25%;display: flex;margin:auto;}
+     /*      #boxrange{width: 98%;height: auto;display: flex;position: relative;margin: auto;}*/
+          #vol{display:none;}
+           #pay{display:none;}
+           #time, #tr{ position: fixed;margin-top:-1.05rem;}
+    }

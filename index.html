@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Gloria+Hallelujah|Open+Sans|Paytone+One|Poppins|Roboto|Roboto+Mono|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>WORLD MUSIC</title>
+	<script src="JS/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/music.css" type="text/css">
+
+	<style>
+		#boxpre{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			position: fixed;
+			background-color: black;
+			z-index: 1000000;
+		}
+		#boximgpre{
+			width: 10%;
+			margin: auto;
+		}
+		#loader{
+			width: 100%;
+			animation: load  infinite 1s;
+		}
+		@keyframes load{
+			0{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);} 
+		}
+		#donar{animation: donar;}
+		@keyframes donar{0%{filter:box-shadow(3px 3px 10px red);}100%{}}
+	</style>
+	<script>
+		function loader(){
+			$('#boxpre').css({display:'none'})
+		}
+	</script>
+		<script>
+  (function() {
+    var cx = '018246953681395059858:9egrap7i0r8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+</head>
+<body onLoad="loader()">
+<!--
+	<div id="boxpre">
+		<div id="boximgpre">
+			<img id="loader" src="icons/loader.png" alt="preload">
+		</div>
+	</div>
+-->
+
+	<header id="baner">
+		<div id="buscadr">
+			<gcse:search></gcse:search>
+		</div>
+
+
+	</header>
+	
+	<nav>
+		<ul id="lsm">
+			<li class="lim"><a href="#"><img id="logo" src="logos/MWM-logo-20172.png" alt="MWM" lowsrc="https://musicworldmedia.com/"></a></li>
+			<li class="lim"><a class="am" href="#" >Inicio</a></li>
+			<li class="lim"><a class="am" href="Reproductor de musica">Música</a></li>	
+			<li class="lim"><a class="am" href="#lo">Podcasts</a></li>
+			<li class="lim"><a class="am" href="Pagina/artistas.html">Artistas</a></li>
+			<!--<li class="lim"><a class="am" href="#">Tienda</a></li>-->
+			<li class="lim"><a class="am" href="#icofooter">Contacto</a></li>
+		</ul>
+	</nav>
+	
+	<main id="main">
+		<!--<a id="donar" href="https://www.paypal.me/wilpay"><img src="http://www.fundacionacta.org/franquias/2/43725/editor-html/1185461.png" alt=""></a>
+<script>$('#donar').css({display:'flex',position:'fixed',zIndex:99999,top:'50%',left:'50%',transform:'translate(-50%,-50%)'})</script>	-->
+		<section>
+			<h2 class="smu">Lo mas escuchado</h2>
+			<article>
+				<div class="topm" id="lo">
+					<div class="mcaratula">
+						<img class="mic" src="caratulas/te_bote_remix.jpg" alt="te bote remix">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>
+					<div class="mcaratula">
+						<img class="mic" src="caratulas/Thalia-Natti-Natasha-No-Me-Acuerdo.jpg" alt="No me acuerdo">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>
+					<div class="mcaratula">
+						<img class="mic" src="caratulas/x.jpg" alt="x">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>
+				</div>
+				
+				<div class="topm">
+					<div class="mcaratula">
+						<img class="mic" src="caratulas/Karol-G-Mi-Cama.jpg" alt="Mi Cama">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>
+					<div class="mcaratula">
+						<img class="mic" src="caratulas/De-La-Ghetto-1-2-3.jpg" alt="">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>
+					<!--<div class="mcaratula">
+						<img class="mic" src="" alt="">
+						<div class="overmusic"><img class="playm" src="icons/play.png" alt="Reproducir"></div>
+					</div>-->
+				</div>
+				
+			</article>
+			<div id="plataforma">
+				<span>&times;</span>
+					<img class="irep" id="wil" src="logos/MWM-logo-20172.png" alt="">
+					<img class="irep" id="itunes" src="logos/applemusic-logo.png" alt="applemusic">
+					<img class="irep" id="spotify" src="logos/Spotify_Logo_RGB_Green.png" alt="spotify">
+					<img class="irep" id="soundcloud" src="logos/soundcloud.png" alt="soundcloud">
+					<img class="irep" id="deezer" src="logos/deezer_logo.png" alt="">
+					<img class="irep" id="youtube" src="logos/youtube_logo.png" alt="youtube">
+			</div>
+			<div id="iframemusic">
+			
+					
+			</div>
+			<div id="tebote">
+				<div>
+				<!--	<img class="irep" src="logos/applemusic-logo.png" alt="">-->
+					<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/pe/album/te-bot%C3%A9-feat-darell-ozuna-nicky-jam-remix/1369095282?i=1369095480" width="660"></iframe>
+				</div>
+				<div>
+<!--					<img class="irep" src="logos/Spotify_Logo_RGB_Green.png" alt="">-->
+					<iframe src="https://open.spotify.com/embed?uri=spotify:track:3V8UKqhEK5zBkBb6d6ub8i" width="480" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/deezer_logo.png" alt="">-->
+					<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=480&height=350&color=007FEB&layout=&size=medium&type=album&id=60682122&app_id=1" width="480" height="100"></iframe>
+				</div>
+				
+				<div>
+					<!--<img class="irep" src="logos/youtube_logo.png" alt="">-->
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/9jI-z9QN6g8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div id="nomeacuerdo">
+						<iframe id="iap" allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/no-me-acuerdo/1390684063?i=1390684073" width="480"></iframe>
+						<iframe src="https://open.spotify.com/embed?uri=spotify:track:00EPIEnX1JFjff8sC6bccd" width="480" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						<iframe width="480px" height="80" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/262028129&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+						<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=480&height=350&color=007FEB&layout=&size=medium&type=tracks&id=505939292&app_id=1" width="480" height="100"></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/iQEVguV71sI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<div id="x">
+				<div>
+<!--					<img class="irep" src="logos/applemusic-logo.png" alt="">-->
+					<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/pe/album/x/1353167949?i=1353168211" width="660"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/Spotify_Logo_RGB_Green.png" alt="">-->
+					<iframe src="https://open.spotify.com/embed?uri=spotify:track:39N9RPD9MRb5WmoLzNzPeA" width="480" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/deezer_logo.png" alt="">-->
+					<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=480&height=350&color=007feb&layout=&size=medium&type=tracks&id=466856262&app_id=1" width="480" height="100"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/youtube_logo.png" alt="">-->
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_I_D_8Z4sJE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				
+			</div>
+			<div id="micama">
+				<div>
+				<!--	<img class="irep" src="logos/applemusic-logo.png" alt="">-->
+					<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/mi-cama/1380957056?i=1380957058" width="660"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/Spotify_Logo_RGB_Green.png" alt="">-->
+					<iframe src="https://open.spotify.com/embed?uri=spotify:album:5s6M2lAR8GdGh8uEJA3HJu" width="480" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					
+				</div>
+				<div>
+<!--					<img class="irep" src="logos/deezer_logo.png" alt="">-->
+					<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=480&height=350&color=007FEB&layout=&size=medium&type=album&id=63095632&app_id=1" width="480" height="100"></iframe>
+				</div>
+				<div>
+				<!--	<img class="irep" src="logos/youtube_logo.png" alt="">-->
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8-mloCL49vs?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				
+			</div>
+			<div id="123">
+				<div>
+					<!--<img class="irep" src="logos/applemusic-logo.png" alt="">-->
+					<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/pe/album/1-2-3-feat-jason-derulo-de-la-ghetto/1343341072?i=1343341077" width="660"></iframe>
+				</div>
+				<div>
+<!--					<img class="irep" src="logos/Spotify_Logo_RGB_Green.png" alt="">-->
+					<iframe src="https://open.spotify.com/embed?uri=spotify:album:1jHSAfCHKUFx5imuezI7HE" width="480" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<div>
+		<!--			<img class="irep" src="logos/soundcloud.png" alt="">-->
+				<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/393033165&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+				</div>
+				<div>
+<!--					<img class="irep" src="logos/deezer_logo.png" alt="">-->
+					<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=480&height=350&color=007FEB&layout=&size=medium&type=tracks&id=457086912&app_id=1" width="480" height="100"></iframe>
+				</div>
+				<div>
+			<!--		<img class="irep" src="logos/youtube_logo.png" alt="">-->
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/p03TIGqEc8o?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				
+			</div>
+
+<!--			https://developer.spotify.com/documentation/widgets/generate/play-button/-->
+		</section>
+		<section>
+			<div id="conciertoozuna">
+				<div id="single">
+					<img class="song" src="caratulas/vainaloca.jpg" alt="Vaina Loca">
+					<img class="song" src="caratulas/pami.jpg" alt="Pa Mi">
+					<img class="song" src="caratulas/casualidad.jpg" alt="Casualidad">
+					<img class="song" src="caratulas/te_bote_remix.jpg" alt="Te Bote Remix">
+					<img class="song" src="caratulas/criminal.jpg" alt="Criminal">
+					<img class="song" src="caratulas/lamodelo.jpg" alt="La Modelo">
+					<img class="song" src="caratulas/osisea.jpg" alt="Odisea">
+				</div>
+			</div>
+		</section>
+	</main>
+	<div id="pago"></div>
+	<script>
+		$('#descarga').click(function(){
+			$('#pago').load('pay.html').css({position:'fixed',zIndex:5565455555555255})
+		})
+	</script>
+
+
+	<div class="box">
+		<audio id="myAudio" name="thali">
+			<source src="Musica/micama.flac" type="audio/flac">
+		</audio>
+	</div>
+	<div id="mainm">
+		<div id="boxoculto">
+			<img id="oculto" src="icons/abajoarriba.png" alt="ocultar">
+		</div>
+		
+		<img id="bgc" src="caratulas/default.jpg" alt="caratula">
+		<div id="image">
+			<img id="caratula" src="icons/audifono.png" alt="Song">
+		</div>
+		<div id="player">
+			<div id="infosong">
+				<p id="songTitle">Nombre de la cancion:</p>
+			</div>
+			<div id="buttons">
+				<img id="pre" src="icons/Pre.png" alt="PRE">
+				<img id="play" src="icons/play.png" alt="PLAY">
+		        <img id="next" src="icons/Next.png" alt="NEXT">
+			</div>
+			<div id="repro">
+				<div class="minuto">
+				<p id="time">00:00</p>
+				</div>
+				<div id="boxrange">
+					<progress id="pro" value="0"></progress>
+					<input type="range" id="myDis" value="0" step="any">
+				</div>
+				<div class="minuto">
+					<p id="tr">00:00</p>
+				</div>
+			</div>
+			
+		</div>
+		<div id="vol">
+			<img src="icons/volumen.png" alt="Volumen" id="audio">
+			<input type="range" id="volumen" value="1" min="0" max="1" step="any">
+		</div>
+		
+		<div id="pay">
+			<button id="cpay"><a id="descarga" href="pay.html" >Descargar</a></button>
+		</div>
+	</div>
+	
+	<script src="JS/music.js"></script>
+	<script>
+		console.log($('source').length)
+	</script>
+	<footer id="icofooter">
+		<div id="iconpag">
+			<img class="iconfoter" src="icons/ITunes_white.png" alt="Itunes">
+			<img class="iconfoter" src="icons/Spotify_Icon_RGB_White.png" alt="spotify">
+			<img class="iconfoter" src="icons/deezer_icon_white.png" alt="deezer">
+			<img class="iconfoter" src="icons/soundcloud ico white.png" alt="soundcloud">
+			<img class="iconfoter" src="icons/youtube_ico_white.png" alt="youtube">
+		</div>
+		<p id="copy">Derechos reservados por &copy;Copyright 2018 wil</p>
+	</footer>
+	<script src="JS/iframemusic.js"></script>
+</body>
+</html>

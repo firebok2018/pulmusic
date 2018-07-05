@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Song</title>
+	<style>
+		*,
+		*::after,
+		*::before{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		#songb{
+			width: 100%;
+			height: 450px;
+			display: block;
+			background-image: url(../baner/songbaner.jpg);
+			background-size: cover;
+		}
+		#song{
+			display: flex;
+			width: 100%;
+			height: 100vh;
+		}
+		.boxsong{
+			display: flex;
+			width: 15rem;
+			height: 15rem;
+			margin: auto;
+		}
+		.songcart{
+			display: block;
+			width: 100%;
+			height: 15rem;
+
+			position: relative;
+		}
+		.song{
+			width: 100%;
+			height: auto;
+			display: block;	
+		}
+		.oversong{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.7);
+			display: flex;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			
+			
+		}
+		.songplay{
+			width: 25%;
+			height: 25%;
+			display: block;
+			margin: auto;
+			cursor: pointer;
+		}
+		.songcart:hover .oversong{
+			opacity: 1;
+		}
+		#songplay{
+			box-sizing: border-box;
+			display: block;
+			width: 50%;
+			height: 4rem;
+			background-color: rgba(201,201,201,1.00);
+			position: fixed;
+			margin: auto;
+			left: 25%;
+			top: 0;
+		}
+		audio{
+			display: block;
+			width: 50%;
+			height: 7rem;
+			background-color: blueviolet;
+		}
+		#s{
+			width: 100%;
+			height: 6rem;
+			display: block;
+			background-color: aqua;
+			border: solid 3rem red;
+		}
+	</style>
+</head>
+<body>
+	<header id="songb"></header>
+	<nav></nav>
+	<div id="song">
+		<article class="boxsong">
+			<div class="songcart">
+				<img src="../caratulas/te_bote_remix.jpg" alt="te bote remix" class="song">
+				<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>		
+		</article>
+		<article class="boxsong">
+			<div class="songcart">
+				<img src="../caratulas/De-La-Ghetto-1-2-3.jpg" alt="1 2 3" class="song">
+				<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>
+			
+		</article>
+		<article class="boxsong">
+			<div class="songcart">
+				<img src="../caratulas/Karol-G-Mi-Cama.jpg" alt="Mi Cama" class="song">
+				<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>
+			
+		</article>
+		<article class="boxsong">
+			<div class="songcart">
+				<img src="../caratulas/no me acuerdo.jpg" alt="No me Acuerdo" class="song">
+				<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>
+			
+		</article>
+		<article class="boxsong">
+			<div class="songcart">
+				<img src="../caratulas/x.jpg" alt="X" class="song">
+				<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>
+			
+		</article>
+		<!--<article class="boxsong">
+			<div class="songcart">
+				<img src="" alt="" class="song">
+			<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+			</div>
+			
+		</article>
+		<article class="songcart">
+			<img src="" alt="" class="song">
+			<div class="oversong"><img src="../icons/play.png" alt="play" class="songplay"></div>
+		</article>-->
+	</div>
+	
+	
+		<audio id="a" controls>
+			<source id="s" src="../Musica/x.flac" type="audio/flac">
+		</audio>
+	<button id="play">♪○^®65534defedsg</button>
+	<iframe src="../video/784989550.mp4"></iframe>
+	<script src="../JS/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$('#play').click(function(){
+				alert($('#a').currentTime)
+			})
+			
+		})
+	</script>
+</body>
+</html>
